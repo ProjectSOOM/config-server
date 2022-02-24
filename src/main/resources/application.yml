@@ -1,0 +1,16 @@
+
+server:
+  shutdown: graceful
+  port: 10000
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: main
+          uri: ${GIT_REPO_URL}
+          username: ${GIT_USER_NAME}
+          password: ${GIT_USER_PASSWORD}
+  application:
+    name: soom-config-server
+
