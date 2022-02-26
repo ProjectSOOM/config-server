@@ -1,16 +1,24 @@
-
 server:
+  port: ${SERVER_PORT}
+  address: ${SERVER_ADDRESS}
   shutdown: graceful
-  port: 10000
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: ${EUREKA_SERVER_ADDRESS}:${EUREKA_SERVER_PORT}/eureka/
+  instance:
+    hostname: ${EUREKA_SERVER_ADDRESS}
 spring:
+  application.name: config-server
   cloud:
     config:
       server:
         git:
+          ignore-local-ssh-settings: true
           default-label: main
           uri: ${GIT_REPO_URL}
-          username: ${GIT_USER_NAME}
-          password: ${GIT_USER_PASSWORD}
-  application:
-    name: soom-config-server
+          username: ${GIT_ID}
+          password: ${GIT_PERSONAL_ACCESS_TOKEN}
 
