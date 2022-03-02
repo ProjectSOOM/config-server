@@ -23,12 +23,19 @@ ext {
 }
 
 dependencies {
-    implementation 'org.springframework.cloud:spring-cloud-config-server'
-    compileOnly 'org.projectlombok:lombok'
-    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor'
+    //Spring Boot
+    annotationProcessor 'org.springframework.boot:spring-boot-configuration-processor' //configuration
+    implementation 'org.springframework.boot:spring-boot-starter-actuator' //actuator
+    testImplementation 'org.springframework.boot:spring-boot-starter-test' //test
+    //Spring Cloud
+    implementation 'org.springframework.cloud:spring-cloud-config-server' //config server
+    implementation 'org.springframework.cloud:spring-cloud-starter-stream-rabbit' //rabbit mq
+    implementation 'org.springframework.cloud:spring-cloud-config-monitor' //config server monitor
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client' //eureka client
+    //Project Lombok
     annotationProcessor 'org.projectlombok:lombok'
-    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    compileOnly 'org.projectlombok:lombok'
+
 }
 
 dependencyManagement {

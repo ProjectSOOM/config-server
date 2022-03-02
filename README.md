@@ -17,3 +17,7 @@ ConfigData 레포지토리에 구성정보들을 저장하여 사용합니다.
 | GIT_REPO_URL | Config Data 를 담은 Repository 의 URL |
 | GIT_ID | Repository 접근 권한을 가진 계정의 ID |
 | GIT_PERSONAL_ACCESS_TOKEN | Repository 접근 권한을 가진 계정의 [토큰](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token) |
+| MQ_SERVER_ADDRESS | MessageQueue 서버의 호스트이름 혹은 ip주소 |
+| MQ_SERVER_PORT | MessageQueue 서버의 포트번호 |
+| MQ_SERVER_USER_NAME | MessageQueue 서버의 Username |
+| MQ_SERVER_PASSWORD | MessageQueue 서버의 Password |
