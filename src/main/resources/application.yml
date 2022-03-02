@@ -1,15 +1,15 @@
 server:
-  port: ${SERVER_PORT}
-  address: ${SERVER_ADDRESS}
+  port: ${CONFIG_SERVER_PORT}
+  address: ${CONFIG_SERVER_ADDRESS}
   shutdown: graceful
 eureka:
   client:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: ${EUREKA_SERVER_ADDRESS}:${EUREKA_SERVER_PORT}/eureka/
+      defaultZone: ${EUREKA_SERVER_DEFAULT_ZONE}
   instance:
-    hostname: ${EUREKA_SERVER_ADDRESS}
+    hostname: ${EUREKA_SERVER_HOSTNAME}
 spring:
   application.name: config-server
   cloud:
